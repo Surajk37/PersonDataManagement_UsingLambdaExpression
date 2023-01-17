@@ -15,7 +15,7 @@ namespace PersonDataManagementLambda
 
         public override string ToString()
         {
-            return $"SSN:{SSN}  Name : {Name}  Address : {Address}  Age : {Age}";
+            return $"SSN:{SSN}  Name : {Name}  Address : {Address}  Age : {Age}";       //Overriden a method to display all data instead of displaying only name
         }
     }
 }
