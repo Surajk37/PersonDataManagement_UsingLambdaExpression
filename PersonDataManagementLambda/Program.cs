@@ -9,7 +9,9 @@
             List<Person> listOfPerson = new List<Person>();
             AddingPersonDetails(listOfPerson);
 
-            PersonDataManagement.Retrieve_Top2Records_AgeBelow60(listOfPerson); 
+            PersonDataManagement.Retrieve_Top2Records_AgeBelow60(listOfPerson);
+
+            PersonDataManagement.RetriveAll_AgeBetween_13to18(listOfPerson);
             Console.ReadLine();
         }
         public static void AddingPersonDetails(List<Person> list)
@@ -19,7 +21,7 @@
             list.Add(new Person() { SSN = 2, Name = "Sourav\t",Address = "Kagal\t",Age = 15 });
             list.Add(new Person() { SSN = 3, Name = "Harshal\t",Address = "Pune\t",Age = 30 });
             list.Add(new Person() { SSN = 4, Name = "Atharva\t",Address = "Mumbai\t",Age = 70 });
-            list.Add(new Person() { SSN = 5, Name = "Ishwar\t",Address = "Beed\t",Age = 59 });
+            list.Add(new Person() { SSN = 5, Name = "Ishwar\t",Address = "Beed\t",Age = 14 });
             list.Add(new Person() { SSN = 6, Name = "Sanket\t",Address = "Jaipur\t",Age = 63 });
             Console.WriteLine("\t\tDisplaying data of all persons");
             DisplayPersonDetails(list);

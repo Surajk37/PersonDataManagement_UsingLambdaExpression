@@ -14,5 +14,11 @@ namespace PersonDataManagementLambda
             Console.WriteLine("\n\t\tTop 2 Person less than Age 60");
             Program.DisplayPersonDetails(topRecords2);
         }
+        public static void RetriveAll_AgeBetween_13to18(List<Person> list)      //UC3 - Retrive all record of age between 13 - 18
+        {
+            var result = list.Where(p => p.Age > 13 && p.Age < 18);
+            Console.WriteLine("\nRecord Between Age 13 to 18");
+            Program.DisplayPersonDetails(result);
+        }
     }
 }
