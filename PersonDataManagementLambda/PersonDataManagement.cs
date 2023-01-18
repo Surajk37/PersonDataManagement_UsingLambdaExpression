@@ -23,8 +23,22 @@ namespace PersonDataManagementLambda
         public static void Retrive_AverageAge(List<Person> list)      //UC4 - Retrive average age in the list
         {
             var resAverage = list.Average(p => p.Age);
-            Console.WriteLine("\n\tAverage of Age is : {0}",Math.Round(resAverage,2));   // in thid case answer having two number after decimal point
+            Console.WriteLine("\n\tAverage of Age is : {0}", Math.Round(resAverage, 2));   // in thid case answer having two number after decimal point
             Console.WriteLine("\tAverage of Age is :{0}", Math.Floor(resAverage));   // in thid case answer is  integer value
+        }
+        public static void ToCheck_NameisPresentorNot(List<Person> list, string input)     //UC5 - Checking for specific name present or not
+        {
+            var result = list.Where(p => p.Name == input).ToList();
+
+            if (result.Count > 0)
+            {
+                Console.WriteLine("\n"+input+" -  Name is Present in list");
+            }
+
+            else
+            {
+                Console.WriteLine("\n"+input+" -  Name is not Present in list");
+            }
         }
     }
 }
