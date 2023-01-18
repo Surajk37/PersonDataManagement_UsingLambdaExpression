@@ -8,10 +8,12 @@
            //UC1- Created object of list
             List<Person> listOfPerson = new List<Person>();
             AddingPersonDetails(listOfPerson);
-
+            //UC2-Top 2 records
             PersonDataManagement.Retrieve_Top2Records_AgeBelow60(listOfPerson);
-
+            //UC3- Age between 13 - 18
             PersonDataManagement.RetriveAll_AgeBetween_13to18(listOfPerson);
+            //UC4- Age Average
+            PersonDataManagement.Retrive_AverageAge(listOfPerson);   
             Console.ReadLine();
         }
         public static void AddingPersonDetails(List<Person> list)

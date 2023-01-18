@@ -17,8 +17,14 @@ namespace PersonDataManagementLambda
         public static void RetriveAll_AgeBetween_13to18(List<Person> list)      //UC3 - Retrive all record of age between 13 - 18
         {
             var result = list.Where(p => p.Age > 13 && p.Age < 18);
-            Console.WriteLine("\nRecord Between Age 13 to 18");
+            Console.WriteLine("\n\t\tRecord Between Age 13 to 18");
             Program.DisplayPersonDetails(result);
+        }
+        public static void Retrive_AverageAge(List<Person> list)      //UC4 - Retrive average age in the list
+        {
+            var resAverage = list.Average(p => p.Age);
+            Console.WriteLine("\n\tAverage of Age is : {0}",Math.Round(resAverage,2));   // in thid case answer having two number after decimal point
+            Console.WriteLine("\tAverage of Age is :{0}", Math.Floor(resAverage));   // in thid case answer is  integer value
         }
     }
 }
